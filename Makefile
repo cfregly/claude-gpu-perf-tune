@@ -13,12 +13,13 @@ SCRIPTS_DIR := scripts
 #   make release-notes VERSION=v0.4.0
 VERSION ?=
 
-.PHONY: help demo validate validate-uncached smoke-test smoke-mcp-runtime check-doc-links lint-skill-mcp-args lint-skill-counts lint-tool-counts lint-versions pytest pytest-xdist all freshness bootstrap print-mcp-snippet doctor install-into-cursor refresh-symlinks release-notes mcp-surface clean-pycache
+.PHONY: help demo check validate validate-uncached smoke-test smoke-mcp-runtime check-doc-links lint-skill-mcp-args lint-skill-counts lint-tool-counts lint-versions pytest pytest-xdist all freshness bootstrap print-mcp-snippet doctor install-into-cursor refresh-symlinks release-notes mcp-surface clean-pycache
 
 help:
 	@printf 'profile-and-optimize operator commands\n\n'
 	@printf 'Common targets:\n'
 	@printf '  make demo                     Print the tool + skill surface (no GPU); a real perf run needs the bundled server + hardware\n'
+	@printf '  make check                    Run the doc-correctness gate + skill/tool/version count lints (the CI doc gates)\n'
 	@printf '  make all                     Run smoke-test + smoke-mcp-runtime + check-doc-links + lint-skill-mcp-args + pytest in series; use `make -j5 all` to run in parallel (target ~3s wall-clock)\n'
 	@printf '  make validate                Run claude plugin validate on the plugin manifest (cached by manifest SHA; ~0.05s on a cache hit)\n'
 	@printf '  make validate-uncached       Bypass the cache and re-run claude plugin validate unconditionally\n'
@@ -63,6 +64,12 @@ smoke-test: validate
 	@python3 $(SCRIPTS_DIR)/lint-tool-counts.py
 	@echo '--- version-header lint ---'
 	@python3 $(SCRIPTS_DIR)/lint-versions.py
+
+check:
+	@python3 scripts/check_docs.py
+	@python3 scripts/lint-skill-counts.py
+	@python3 scripts/lint-tool-counts.py
+	@python3 scripts/lint-versions.py
 
 demo:
 	@printf '== profile-and-optimize: the tool and skill surface (no GPU needed) ==\n'
