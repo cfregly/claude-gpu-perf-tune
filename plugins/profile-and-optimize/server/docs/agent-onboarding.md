@@ -31,7 +31,7 @@ client config. The Cursor block is:
   "command": "~/.local/share/profile-and-optimize-mcp-venv/bin/python",
   "args": ["-m", "profile_and_optimize_mcp", "serve"],
   "env": {
-    "PROFILE_AND_OPTIMIZE_REPO_ROOT": "/path/to/claude-perf-tune/plugins/profile-and-optimize/server",
+    "PROFILE_AND_OPTIMIZE_REPO_ROOT": "/path/to/claude-gpu-perf-tune/plugins/profile-and-optimize/server",
     "PROFILE_AND_OPTIMIZE_LOGIN_HOST": "${USER}@192.0.2.10"
   }
 }

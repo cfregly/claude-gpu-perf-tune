@@ -74,7 +74,7 @@ SOURCE_MD_TEMPLATE = """# SOURCE
 ## Provenance
 
 - Workstation kernel: `{uname}`
-- Repo: `<your-org>/claude-perf-tune` (skills + bundled MCP server).
+- Repo: `<your-org>/claude-gpu-perf-tune` (skills + bundled MCP server).
 - Bundle path: `experiments/artifacts/{family}/{run_id}/`
 
 ## Experiment isolation & traceability

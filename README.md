@@ -1,6 +1,6 @@
-# claude-perf-tune
+# claude-gpu-perf-tune
 
-[![ci](https://github.com/cfregly/claude-perf-tune/actions/workflows/ci.yml/badge.svg)](https://github.com/cfregly/claude-perf-tune/actions/workflows/ci.yml)
+[![ci](https://github.com/cfregly/claude-gpu-perf-tune/actions/workflows/ci.yml/badge.svg)](https://github.com/cfregly/claude-gpu-perf-tune/actions/workflows/ci.yml)
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 GPU inference profiling and optimization skills for [Claude Code](https://claude.com/claude-code), backed by a bundled MCP server: shipped as the `profile-and-optimize` plugin. 31 task-oriented workflows covering benchmark sweeps, kernel-level profiling (nsys / ncu / DCGM / zymtrace), speed-of-light roofline analysis, quantization and speculative-decode tuning, and a multi-page PDF perf-tune report renderer. Each skill is a `SKILL.md` following the open [Agent Skills standard](https://agentskills.io/).
@@ -20,7 +20,7 @@ Six public repos, one per stage of Anthropic's Founder's Playbook (Idea, MVP, La
 - **Launch**, turn traction into a growth engine that runs without founder bottlenecks: [claude-startup-launch](https://github.com/cfregly/claude-startup-launch)
 - **Scale**, build a GTM function and compound data into a moat: [claude-startup-scale](https://github.com/cfregly/claude-startup-scale)
 - **Quality**, every stage: [claude-deslop](https://github.com/cfregly/claude-deslop)
-- **Cost**, every stage: **[claude-perf-tune](https://github.com/cfregly/claude-perf-tune) (this repo)**
+- **Cost**, every stage: **[claude-gpu-perf-tune](https://github.com/cfregly/claude-gpu-perf-tune) (this repo)**
 
 ## What this is
 
@@ -35,7 +35,7 @@ This is a Claude Code plugin: Claude operates it. The 31 skills and the bundled 
 
 ```bash
 # 1. Add the marketplace.
-claude plugin marketplace add cfregly/claude-perf-tune
+claude plugin marketplace add cfregly/claude-gpu-perf-tune
 
 # 2. Install the plugin.
 claude plugin install --scope user profile-and-optimize@profile-and-optimize-plugins

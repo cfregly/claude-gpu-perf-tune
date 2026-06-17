@@ -13,7 +13,7 @@ This document covers:
 ## TL,DR new contributor flow
 
 ```bash
-git clone git@github.com:<your-org>/claude-perf-tune.git
+git clone git@github.com:<your-org>/claude-gpu-perf-tune.git
 cd profile-and-optimize
 
 # Add a new skill.

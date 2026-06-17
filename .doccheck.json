@@ -1,6 +1,6 @@
 {
   "owner": "cfregly",
-  "repo": "claude-perf-tune",
-  "old_names": ["claude-code-profile-and-optimize"],
+  "repo": "claude-gpu-perf-tune",
+  "old_names": ["claude-code-profile-and-optimize", "claude-perf-tune"],
   "docs": ["README.md"]
 }

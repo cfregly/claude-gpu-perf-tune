@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "profile-and-optimize-server"
 version = "0.2.0"
-description = "Bundled MCP server source for the GPU-fleet profile-and-optimize Claude Code plugin. <your-org>/claude-perf-tune is the source of truth. Ships 8 CLI stub libraries (ai_tuning / profile / perf_baseline / evidence / slurm / findings / perf_tune_report / known_good_config) + the tools/ implementation tree that mcp_surface.py derives 51 contract-driven MCP tools from (+ 2 auxiliary = 53 total)."
+description = "Bundled MCP server source for the GPU-fleet profile-and-optimize Claude Code plugin. <your-org>/claude-gpu-perf-tune is the source of truth. Ships 8 CLI stub libraries (ai_tuning / profile / perf_baseline / evidence / slurm / findings / perf_tune_report / known_good_config) + the tools/ implementation tree that mcp_surface.py derives 51 contract-driven MCP tools from (+ 2 auxiliary = 53 total)."
 requires-python = ">=3.11"
 authors = [{name = "the repo author"}]
 dependencies = [
