@@ -37,8 +37,6 @@ import textwrap
 from pathlib import Path
 from typing import Any
 
-import yaml
-
 CONTRACT: dict[str, dict[str, Any]] = {
     "record": {
         "safety": "writes_artifacts",
@@ -90,6 +88,8 @@ def _resolve_registry(arg: str | None) -> Path:
 
 
 def _load_registry(path: Path) -> dict[str, Any]:
+    import yaml
+
     if not path.is_file():
         raise SystemExit(f"FATAL: registry not found: {path}")
     data = yaml.safe_load(path.read_text()) or {}
@@ -131,6 +131,8 @@ def _parse_required_flag(raw: str) -> dict[str, str]:
 
 
 def cmd_record(args: argparse.Namespace) -> int:
+    import yaml
+
     registry_path = _resolve_registry(args.registry)
     registry = _load_registry(registry_path)
 
