@@ -19,7 +19,8 @@ The release line moves forward as new MINORs ship. See the GitHub releases for t
 
 For a security report:
 
-- Open a private report through GitHub Security Advisories: the repository Security Advisories page (repo **Security** tab → **Advisories** → **Report a vulnerability**).
+- Open a private report through GitHub Security Advisories from the repository's
+  **Security** tab: **Advisories** → **Report a vulnerability**.
 - Include a minimal reproduction (skill name, exact prompt, what was leaked or what unsafe action was taken).
 - Include the plugin version (`cat plugins/profile-and-optimize/.claude-plugin/plugin.json | python3 -c "import json,sys;print(json.load(sys.stdin)['version'])"`).
 - Include the operator workstation OS + Claude Code / Cursor version.
@@ -49,4 +50,4 @@ We credit the reporter in the release notes for the fix release, with the report
 
 ## Contact
 
-Security reports: through GitHub Security Advisories.
+Security reports go through the repository's GitHub Security Advisories.

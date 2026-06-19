@@ -20,7 +20,6 @@ The repository layout, quickstart, and methodology live in
 ## Behavioral guidelines
 
 Behavioral guidelines to reduce common LLM coding mistakes.
-Source: Public coding-guidelines baseline.
 
 **Tradeoff:** These guidelines bias toward caution over speed. For trivial tasks, use judgment.
 

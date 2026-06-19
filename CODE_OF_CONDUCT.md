@@ -9,6 +9,5 @@ enforcement works, is at the link above.
 
 ## Enforcement
 
-Report unacceptable behavior to the maintainer through
-the repository maintainer contact. Reports are reviewed and kept
-confidential.
+Report unacceptable behavior through the repository's maintainer contact.
+Reports are reviewed and kept confidential.

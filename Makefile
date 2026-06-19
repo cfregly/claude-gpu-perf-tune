@@ -8,6 +8,7 @@
 PLUGIN_DIR := plugins/profile-and-optimize
 SERVER_DIR := $(PLUGIN_DIR)/server
 SCRIPTS_DIR := scripts
+SERVER_PY := $(SERVER_DIR)/.venv/bin/python
 
 # Default VERSION for `make release-notes`. Override on the command line:
 #   make release-notes VERSION=v0.4.0
@@ -56,7 +57,11 @@ validate-uncached:
 
 smoke-test: validate
 	@echo '--- frontmatter lint ---'
-	@python3 -c "$$FRONTMATTER_LINT_PY"
+	@if [ -x "$(SERVER_PY)" ]; then \
+	  "$(SERVER_PY)" -c "$$FRONTMATTER_LINT_PY"; \
+	else \
+	  python3 -c "$$FRONTMATTER_LINT_PY"; \
+	fi
 	@echo '--- mcp_surface canonical counts ---'
 	@python3 $(SERVER_DIR)/mcp_surface.py counts
 	@echo '--- skill / tool count lints ---'

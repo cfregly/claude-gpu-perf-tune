@@ -3,10 +3,10 @@ description: Behavioral guidelines to reduce common LLM coding mistakes. Use whe
 alwaysApply: true
 ---
 
-Follow the agent behavioral guidelines in @CLAUDE.md — think before coding
+Follow the agent behavioral guidelines in @CLAUDE.md: think before coding
 (surface assumptions and tradeoffs), simplicity first (minimum code, nothing
 speculative), surgical changes (every changed line traces to the request),
-and goal-driven execution (verifiable success criteria) — plus its
+and goal-driven execution (verifiable success criteria), plus its
 "Working in this repo" gates (`make all`, canonical counts in
 `mcp_surface.py`, `docs/METHODOLOGY.md` rigor rules).
 
