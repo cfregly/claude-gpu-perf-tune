@@ -9,6 +9,10 @@ read a large model single-stream through s3fs FUSE.
 
 ## The problem
 
+Note (DRAFT): the throughput and load-time figures in this doc are single-observation
+field measurements on specific hardware, not reproducible VERDICTs. Read them as
+order-of-magnitude and re-measure on your own node before quoting.
+
 GLM-5.1 NVFP4 (433.9 GB, 49 shards) loaded **single-stream through s3fs FUSE
 at ~58 MB/s = ~50 min cold, EVERY launch**. That destroys iteration speed and
 is forbidden as a default.
